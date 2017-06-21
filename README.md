@@ -12,7 +12,7 @@ A project used to learn Java.
 
 ========================================
 ## Level 1 
--[] variable determination 
+-[x] variable determination 
 
 -[] print menu with its options
 
