@@ -2,67 +2,67 @@
 
 A project used to learn Java.
 
--[] Level 1 : Dealing with a menu
+- Level 1 : Dealing with a menu
 
--[] Level 2 : Memory optimization
+- Level 2 : Memory optimization
 
--[] Level 3 : Graphs
+- Level 3 : Graphs
 
--[] Level 4 : Graphical User Interface
+- Level 4 : Graphical User Interface
 
 ========================================
 ## Level 1 
--[x] variable determination 
+1. variable determination 
 
--[] print menu with its options
+2. print menu with its options
 
--[] accessing to a menu according to the option choosen
+3. accessing to a menu according to the option choosen
 
--[] creating an interactive menu 
+4. creating an interactive menu 
 
 ## Level 2
--[] function definition
+5. function definition
 
--[] calling a function
+6. calling a function
 
--[] understanding variable visibility
+7. understanding variable visibility
 
--[] limits of result return
+8. limits of result return
 
--[] dealing with char
+9. dealing with char
 
--[] defining the account type
+10. defining the account type
 
--[] building the app
+11. building the app
 
--[] defining "ligneComptable" type
+12. defining "ligneComptable" type
 
--[] modifying it
+13. modifying it
 
--[] modifying the app
+14. modifying the app
 
--[] data encapsulation
+15. data encapsulation
 
--[] inheritance
+16. inheritance
 
--[] dealing with 10 bank operations
+17. dealing with 10 bank operations
 
--[] account like dictionnary
+18. account like dictionnary
 
--[] save
+19. save
 
--[] dealing with datetime
+20. dealing with datetime
 
 ## Level 3 
--[] stats calculation
+21. stats calculation
 
 ## Level 4
--[] GUI
+22. GUI
 
--[] app specs
+23. app specs
 
--[] app structure
+24. app structure
 
--[] designing GUI
+25. designing GUI
 
--[] behavior definition 
+26. behavior definition 
