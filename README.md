@@ -1,4 +1,4 @@
-#Bank account manager 
+# Bank account manager 
 
 A project used to learn Java.
 
