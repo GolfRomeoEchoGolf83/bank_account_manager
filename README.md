@@ -12,7 +12,7 @@ A project used to learn Java.
 
 ========================================
 ## Level 1 
-1. [DONE] variable determination 
+1. __[DONE]__ variable determination 
 
 2. print menu with its options
 
