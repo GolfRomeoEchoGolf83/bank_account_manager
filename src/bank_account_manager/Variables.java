@@ -2,8 +2,9 @@ package bank_account_manager;
 import java.util.*;
 public class Variables {
 
-	public static void main(String[] args) {
+	public static void main (String[] args) {
 		// variable declaration
+		byte choice;
 		char account_type = '\0'; 
 		char payment_device = '\0';
 		char object = '\0';
@@ -22,7 +23,7 @@ public class Variables {
 		System.out.print("Votre choix : ");
 		
 		// user's choice
-		input = userInput.nextByte();
+		choice = userInput.nextByte();
 
 		// if choice 1 : create account
 		System.out.println("Choisir le type de compte (C)ourant, (J)oint, (E)pargne ");
@@ -35,15 +36,15 @@ public class Variables {
 		rate = userInput.nextDouble();
 
 		// if choice 2 : print account
-		System.out.print("Quel compte souhaitez vous consulter ?");
+		System.out.println("Quel compte souhaitez vous consulter ?");
 		account_num = userInput.nextLong();
 		// if account does not exist
-		System.out.print("Le compte numéro : " + account_num + "n'est pas reconnu par le système.");
+		System.out.println("Le compte numéro : " + account_num + " n'est pas reconnu par le système.");
 		// if account exist and its an epargne print current_value and its rate
-		System.out.println("Le taux du compte numéro :" + account_num + "est à :" + rate);
-		System.out.print("La valeur courante du compte numéro :" + account_num + "est de :" + current_value);
+		System.out.println("Le taux du compte numéro : " + account_num + " est à : " + rate);
+		System.out.println("La valeur courante du compte numéro : " + account_num + " est de : " + current_value);
 		// if account exist and its not an epargne print current_value
-		System.out.println("La valeur courante du compte numero :" + account_num + "est de : " + current_value);
+		System.out.println("La valeur courante du compte numero : " + account_num + " est de : " + current_value);
 
 		// if choice 3 : new operation creation
 		System.out.println("Option non programmee");
