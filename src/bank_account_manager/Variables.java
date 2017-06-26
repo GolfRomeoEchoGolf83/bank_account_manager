@@ -29,17 +29,19 @@ public class Variables {
 
 			switch (choice) {
 			case 1 :
-				// if choice 1 : create account
-				System.out.println("Choisir le type de compte (C)ourant, (J)oint, (E)pargne :");
-				account_type = userInput.next().charAt(0);
-				System.out.println("Numero du compte :");
+				do {
+					// if choice 1 : create account
+					System.out.print("Choisir le type de compte (C)ourant, (J)oint, (E)pargne : ");
+					account_type = userInput.next().charAt(0);
+				} while (account_type != 'C' && account_type != 'J' && account_type != 'E' );
+				System.out.print("Numero du compte : ");
 				account_num_created = userInput.nextLong();
-				System.out.println("Premiere valeur creditee :");
+				System.out.print("Premiere valeur creditee : ");
 				current_value = userInput.nextDouble();
 				
 				// if (E)pargne = ask for rate 
 				if (account_type == 'E') {
-					System.out.println("Choisir le taux de placement :");
+					System.out.print("Choisir le taux de placement : ");
 					rate = userInput.nextDouble();
 				}
 				break;
@@ -51,12 +53,12 @@ public class Variables {
 				// if account exist and its an epargne print current_value and its rate
 					// account exist
 				if (account_num_entered == account_num_created) {
-					System.out.println("Le compte numéro : " + account_num_created + " est un compte : ");
-					if (account_type == 'C') System.out.print(" courant");
-					else if (account_type == 'J') System.out.print(" joint");
+					System.out.print("Le compte numéro : " + account_num_created + " est un compte :");
+					if (account_type == 'C') System.out.println(" courant.");
+					else if (account_type == 'J') System.out.println(" joint");
 					else if (account_type == 'E') {
-						System.out.println(" epargne");
-						System.out.println(" dont le taux est de : " + rate);
+						System.out.print(" epargne");
+						System.out.println(" dont le taux est de : " + rate + ".");
 					}	
 					System.out.println("La valeur courante du compte est de : " + current_value);
 					// account does not exist 
@@ -92,6 +94,9 @@ public class Variables {
 				System.out.println("Option 5 :");
 				System.out.println("Afficher de l'aide : Vous y etes ;) ");
 				break;
+				
+				default :
+					System.out.println("Cette option n'est pas prévue par le système");
 			}		
 		} while (choice != 4);	
 	}
