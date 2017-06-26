@@ -18,7 +18,7 @@ A project used to learn Java.
 
 3. __[DONE]__ accessing to a menu according to the option choosen
 
-4. creating an interactive menu 
+4. __[DONE]__ creating an interactive menu 
 
 ## Level 2
 5. function definition
