@@ -14,9 +14,9 @@ A project used to learn Java.
 ## Level 1 
 1. __[DONE]__ variable determination 
 
-2. print menu with its options
+2. __[DONE]__ print menu with its options
 
-3. accessing to a menu according to the option choosen
+3. __[DONE]__ accessing to a menu according to the option choosen
 
 4. creating an interactive menu 
 
