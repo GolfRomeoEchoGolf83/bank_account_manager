@@ -10,7 +10,8 @@ public class Variables {
 		char object = '\0';
 		double current_value = 0.0;
 		double rate = 0.0;
-		long account_num = 0;
+		long account_num_created = 0;
+		long account_num_entered = 0;
 
 		Scanner userInput = new Scanner(System.in);
 
@@ -28,27 +29,36 @@ public class Variables {
 		switch (choice) {
 		case 1 :
 			// if choice 1 : create account
-			System.out.println("Choisir le type de compte (C)ourant, (J)oint, (E)pargne ");
+			System.out.println("Choisir le type de compte (C)ourant, (J)oint, (E)pargne :");
 			account_type = userInput.next().charAt(0);
-			System.out.println("Numero du compte");
-			account_num = userInput.nextLong();
-			System.out.println("Premiere valeur creditee");
+			System.out.println("Numero du compte :");
+			account_num_created = userInput.nextLong();
+			System.out.println("Premiere valeur creditee :");
 			current_value = userInput.nextDouble();
-			System.out.println("Taux de placement");
-			rate = userInput.nextDouble();
+			
+			// if (E)pargne = ask for rate 
+			if (account_type == 'E') {
+				System.out.println("Choisir le taux de placement :");
+				rate = userInput.nextDouble();
+			}
 			break;
 		
 		// if choice 2 : print account
 		case 2 :
 			System.out.println("Quel compte souhaitez vous consulter ?");
-			account_num = userInput.nextLong();
-			// if account does not exist
-			System.out.println("Le compte numéro : " + account_num + " n'est pas reconnu par le système.");
+			account_num_entered = userInput.nextLong();
 			// if account exist and its an epargne print current_value and its rate
-			System.out.println("Le taux du compte numéro : " + account_num + " est à : " + rate);
-			System.out.println("La valeur courante du compte numéro : " + account_num + " est de : " + current_value);
-			// if account exist and its not an epargne print current_value
-			System.out.println("La valeur courante du compte numero : " + account_num + " est de : " + current_value);
+				// account exist
+			if (account_num_entered == account_num_created) {
+				System.out.println("Le compte numéro : " + account_num_created + "est un compte : ");
+				if (account_type == 'C') System.out.println(" courant");
+				else if (account_type == 'J') System.out.println(" joint");
+				else if (account_type == 'E') {
+					System.out.println(" epargne dont le taux est de : " + rate);
+				}	
+				System.out.println("La valeur courante du compte est de : " + current_value);
+				// account does not exist 
+			} else System.out.println("Le compte numéro : " + account_num_entered + " n'est pas reconnu par le système.");	
 			break;
 		
 		// if choice 3 : new operation creation
@@ -81,5 +91,7 @@ public class Variables {
 			System.out.println("Afficher de l'aide : Vous y etes ;) ");
 			break;
 		}
+		
+		
 	}
 }
