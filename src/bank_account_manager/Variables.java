@@ -2,10 +2,10 @@ package bank_account_manager;
 import java.util.*;
 public class Variables {
 	// class variables 
-	long num;
-	char type;
-	double taux;
-	double val;
+	static long num;
+	static char type;
+	static double taux;
+	static double val;
 
 	public static void main (String[] args) {
 		// variable declaration
