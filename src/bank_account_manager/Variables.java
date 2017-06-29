@@ -1,6 +1,11 @@
 package bank_account_manager;
 import java.util.*;
 public class Variables {
+	// class variables 
+	long num;
+	char type;
+	double taux;
+	double val;
 
 	public static void main (String[] args) {
 		// variable declaration
@@ -97,6 +102,7 @@ public class Variables {
 	
 	// displaying some help
 	public static void help() {
+		System.out.println("======================================================");
 		System.out.println("Option 1 :");
 		System.out.println("Pour créer un compte courante entrer : C"); 
 		System.out.println("Pour créer un compte joint entrer : J");
@@ -112,6 +118,27 @@ public class Variables {
 		System.out.println(" Quitter le programme");
 		System.out.print("Option 5 :");
 		System.out.println(" Afficher de l'aide. Vous y etes ;) ");
-		System.out.println(" ");
+		System.out.println("======================================================");
 	}
+	
+	// print account
+	public static void printAccount() {
+		
+		System.out.print("Le compte n° : " + num + " est un compte ");
+		if (type == 'C') System.out.println(" courant ");
+		else if (type == 'J') System.out.println(" joint ");
+		else if (type == 'E') {
+			// print rate 
+			System.out.println(" epargne dont le taux est " + taux);
+		}
+		System.out.println(" Valeur initiale : " + val);
+		}
+
+	// create account
+	public static char createAccount(String s) {
+		// return value is the first letter of the choice made by the user
+		return s.charAt(0);
+	}
+
 }
+
